@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wolfsrudel beitreten – HuMuRide</title>
+<style>
+  :root { --bg:#04070A; --panel:#161C23; --edge:#2A3441; --ivory:#F2EEE6; --orange:#E8A04A; --green:#8BD17C; --muted:#9AA7B5; }
+  body { margin:0; background:var(--bg); color:var(--ivory); font-family:system-ui,sans-serif; line-height:1.5; }
+  main { max-width:480px; margin:0 auto; padding:32px 16px; }
+  h1 { font-size:26px; margin:0 0 8px; }
+  .role { color:var(--orange); font-weight:700; }
+  .card { background:var(--panel); border:1px solid var(--edge); border-radius:14px; padding:18px; margin-top:20px; }
+  a.btn { display:block; text-align:center; background:var(--green); color:#04070A; font-weight:800; font-size:18px;
+          text-decoration:none; padding:16px; border-radius:12px; margin-top:16px; }
+  small, .muted { color:var(--muted); }
+  footer { margin-top:32px; font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>🐺 Wolfsrudel beitreten</h1>
+  <p>Du wurdest zu einer Gruppenfahrt mit <b>HuMuRide</b> eingeladen.</p>
+  <p id="role" class="role"></p>
+  <a id="open" class="btn" href="#">In HuMuRide öffnen</a>
+  <div class="card">
+    <b>Klappt nicht?</b>
+    <p class="muted">HuMuRide muss auf deinem Android-Handy installiert sein (zurzeit nur im Test, frag den Leitwolf).
+    Öffne den Link in Chrome. Oder lass dir vor Ort den QR-Code zeigen: HuMuRide → Stígrvísir → Wolfsrudel → Rudel beitreten.</p>
+  </div>
+  <footer>HuMuRide – aus dem Hegowerk · <a href="/humuride/datenschutz.html" style="color:var(--muted)">Datenschutz</a></footer>
+</main>
+<script>
+  // Die Rudel-Angaben stehen hinter dem #; sie werden nie an diesen Server geschickt.
+  var q = location.hash.replace(/^#/, '');
+  var p = new URLSearchParams(q);
+  var names = { freki: 'Freki (Blocker)', geri: 'Geri (Lumpensammler)' };
+  if (p.get('p')) {
+    var r = p.get('r') || '', n = p.get('n');
+    var label = r === 'geri' ? names.geri
+      : (r === 'freki' ? 'Freki' : 'Wolf') + (n ? ' ' + n : '') + (r === 'freki' ? ' (Blocker)' : ' (Mitfahrer)');
+    document.getElementById('role').textContent = 'Deine Rolle: ' + label;
+    var intent = 'intent://rudel?' + q + '#Intent;scheme=humuride;package=de.humuride.humuride;end';
+    var plain = 'humuride://rudel?' + q;
+    var a = document.getElementById('open');
+    a.href = /Android/i.test(navigator.userAgent) ? intent : plain;
+    setTimeout(function () { location.href = a.href; }, 400);
+  } else {
+    document.getElementById('open').style.display = 'none';
+    document.getElementById('role').textContent = 'Dieser Link ist unvollständig. Bitte den Leitwolf um eine neue Einladung.';
+  }
+</script>
+</body>
+</html>
