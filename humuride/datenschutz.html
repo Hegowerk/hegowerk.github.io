@@ -31,7 +31,7 @@
 </p>
 
 <h2>2. Grundsatz</h2>
-<p>HuMuRide ist eine Navigations- und Tourenapp für Motorradfahrer. Die App hat <strong>kein Benutzerkonto, keine Werbung und keine Analyse- oder Tracking-Dienste</strong>. Deine Touren, Motorräder, Fotos und Einstellungen werden <strong>nur auf deinem Gerät</strong> gespeichert. Der Entwickler erhält keine dieser Daten, außer du schickst sie ihm selbst (siehe Punkt 7). Nur wenn du an einer Gruppenfahrt (Wolfsrudel) teilnimmst, werden während dieser Fahrt Standort und Name mit der Gruppe geteilt (siehe Punkt 5).</p>
+<p>HuMuRide ist eine Navigations- und Tourenapp für Motorradfahrer. Die App hat <strong>kein Benutzerkonto, keine Werbung und keine Analyse- oder Tracking-Dienste</strong>. Deine Touren, Motorräder, Fotos und Einstellungen werden <strong>nur auf deinem Gerät</strong> gespeichert. Der Entwickler erhält keine dieser Daten, außer du schickst sie ihm selbst (siehe Punkt 7). Nur wenn du an einer Gruppenfahrt (Wolfsrudel) teilnimmst, werden während dieser Fahrt Standort und Name über den Rudel-Dienst mit der Gruppe geteilt (siehe Punkt 5).</p>
 
 <h2>3. Welche Daten die App auf deinem Gerät verarbeitet</h2>
 <ul>
@@ -57,7 +57,7 @@
 <h2>5. Wolfsrudel (Gruppenfahrt)</h2>
 <p>Das Wolfsrudel ist freiwillig. Es wird nur aktiv, wenn du selbst ein Rudel gründest oder einer Einladung folgst.</p>
 <ul>
-  <li><strong>Wer die Daten erhält</strong>: Die Gruppe wird über einen „Rudel-Dienst“ abgeglichen. Dieser läuft auf einem eigenen Server des Leitwolfs (Tourguide), der das Rudel gegründet hat; die Adresse steckt in der Einladung. Es gibt keinen zentralen Dienst des Entwicklers für alle Nutzer. Die Verbindung ist verschlüsselt (https). Ist der Dienst über <em>Tailscale Funnel</em> erreichbar, wird die verschlüsselte Verbindung über Server der Tailscale Inc. weitergeleitet, ohne dass diese den Inhalt lesen können.</li>
+  <li><strong>Wer die Daten erhält</strong>: Die Gruppe wird über einen „Rudel-Dienst“ abgeglichen. Dieser läuft auf einem Server des Betreibers des Rudel-Dienstes (derzeit Hegowerk); die Adresse steckt in der Einladung. Der Leitwolf (Tourguide) führt die Gruppe, betreibt den Server aber nicht selbst. Die Verbindung ist verschlüsselt (https). Ist der Dienst über <em>Tailscale Funnel</em> erreichbar, wird die verschlüsselte Verbindung über Server der Tailscale Inc. weitergeleitet, ohne dass diese den Inhalt lesen können.</li>
   <li><strong>Welche Daten</strong>: der Name, den du in HuMuRide eingetragen hast, der Name deines Motorrads, deine Rolle im Rudel, und – erst ab dem „Sammelruf“ des Leitwolfs – dein Standort mit Tempo und Fahrtrichtung, etwa alle 5 Sekunden. Dazu Kurznachrichten (z. B. „Pause“, „Tanken“, „Rudel verloren“), der Treffpunkt und die Wegpunkte der Route des Leitwolfs. Diese Angaben sehen alle Mitglieder desselben Rudels.</li>
   <li><strong>Wie lange</strong>: Der Rudel-Dienst hält die Daten nur im Arbeitsspeicher, nicht auf der Festplatte. Sie werden gelöscht, wenn der Leitwolf das Rudel auflöst, wenn 24 Stunden lang niemand mehr verbunden war, spätestens nach 3 Tagen, oder wenn der Dienst neu startet. Wer das Rudel verlässt, wird aus der Liste entfernt.</li>
   <li><strong>Einladungslink</strong>: Der Link zeigt eine kleine Seite auf <em>hegowerk.github.io</em> (GitHub Pages, GitHub Inc.). Die Rudel-Angaben stehen im Link hinter dem Zeichen „#“ und werden deshalb nicht an GitHub übertragen; GitHub erhält technisch bedingt nur die IP-Adresse und den Seitenaufruf.</li>
@@ -66,7 +66,7 @@
   <li><strong>Mitglieder entfernen</strong>: Der Leitwolf kann einzelne Mitglieder aus dem Rudel entfernen. Name und Standort des Entfernten werden sofort aus der Liste gelöscht, sein Gerät teilt danach nichts mehr. Mit „Einladung erneuern“ werden alte Einladungslinks ungültig.</li>
   <li><strong>Beenden</strong>: Mit „Rudel verlassen“ (Leitwolf: „Rudel auflösen“) oder „Fenrir (allein weiter)“ endet das Teilen sofort. Bei Fenrir erhalten die anderen Mitglieder nur die Nachricht, dass du allein weiterfährst; dein Standort wird gelöscht und nicht mehr angenommen. Die Rolle als Leitwolf oder Geri (Lumpensammler) geht an ein anderes Mitglied über.</li>
 </ul>
-<p>Rechtsgrundlage ist deine Einwilligung durch Gründen oder Beitreten (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit durch Verlassen des Rudels widerrufen kannst. Verantwortlich für den Rudel-Dienst ist der Leitwolf, der ihn betreibt.</p>
+<p>Rechtsgrundlage ist deine Einwilligung durch Gründen oder Beitreten (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit durch Verlassen des Rudels widerrufen kannst. Verantwortlich für den Rudel-Dienst ist dessen Betreiber (derzeit Hegowerk, Kontakt siehe Punkt 1).</p>
 
 <h2>6. Sicherungen</h2>
 <ul>
@@ -85,7 +85,7 @@
 <p>Alle Daten liegen auf deinem Gerät. Du kannst einzelne Touren in der App löschen oder alles entfernen, indem du die App deinstallierst. Die automatische Sicherungsdatei im Download-Ordner bleibt dabei bewusst erhalten und kann mit einem Dateimanager gelöscht werden.</p>
 
 <h2>10. Deine Rechte</h2>
-<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (in Baden-Württemberg: Landesbeauftragter für den Datenschutz und die Informationsfreiheit). Da der Entwickler keine Daten von dir speichert, genügt für Fragen eine E-Mail an <a href="mailto:hegowerk.hilfe@web.de">hegowerk.hilfe@web.de</a>.</p>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (in Baden-Württemberg: Landesbeauftragter für den Datenschutz und die Informationsfreiheit). Da der Entwickler außer den kurzzeitigen Daten im Rudel-Dienst (Punkt 5) keine Daten von dir speichert, genügt für Fragen eine E-Mail an <a href="mailto:hegowerk.hilfe@web.de">hegowerk.hilfe@web.de</a>.</p>
 
 <hr>
 <p class="muted">Kartendaten © OpenStreetMap-Mitwirkende (ODbL).</p>
