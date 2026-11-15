@@ -20,7 +20,7 @@
 <body>
 <main>
 <h1>Datenschutzerklärung für HuMuRide</h1>
-<p class="muted">App „HuMuRide“ – aus dem Hegowerk · Stand: 14. November 2026</p>
+<p class="muted">App „HuMuRide“ – aus dem Hegowerk · Stand: 15. November 2026</p>
 
 <h2>1. Verantwortlich</h2>
 <p>
@@ -31,19 +31,20 @@
 </p>
 
 <h2>2. Grundsatz</h2>
-<p>HuMuRide ist eine Navigations- und Tourenapp für Motorradfahrer. Die App hat <strong>kein Benutzerkonto, keine Werbung und keine Analyse- oder Tracking-Dienste</strong>. Deine Touren, Motorräder, Fotos und Einstellungen werden <strong>nur auf deinem Gerät</strong> gespeichert. Der Entwickler erhält keine dieser Daten, außer du schickst sie ihm selbst (siehe Punkt 6).</p>
+<p>HuMuRide ist eine Navigations- und Tourenapp für Motorradfahrer. Die App hat <strong>kein Benutzerkonto, keine Werbung und keine Analyse- oder Tracking-Dienste</strong>. Deine Touren, Motorräder, Fotos und Einstellungen werden <strong>nur auf deinem Gerät</strong> gespeichert. Der Entwickler erhält keine dieser Daten, außer du schickst sie ihm selbst (siehe Punkt 7). Nur wenn du an einer Gruppenfahrt (Wolfsrudel) teilnimmst, werden während dieser Fahrt Standort und Name mit der Gruppe geteilt (siehe Punkt 5).</p>
 
 <h2>3. Welche Daten die App auf deinem Gerät verarbeitet</h2>
 <ul>
-  <li><strong>Standort</strong> (genau, auch im Hintergrund): um Touren aufzuzeichnen, zu navigieren und Touren zu planen. Die Hintergrund-Erlaubnis wird nur genutzt, solange eine Aufnahme oder Navigation läuft oder der automatische Tourstart eingeschaltet ist.</li>
+  <li><strong>Standort</strong> (genau, auch im Hintergrund): um Touren aufzuzeichnen, zu navigieren und Touren zu planen. Die Hintergrund-Erlaubnis wird nur genutzt, solange eine Aufnahme oder Navigation läuft, der automatische Tourstart eingeschaltet ist oder du in einem Wolfsrudel deinen Standort teilst (dann mit Hinweis in der Statusleiste).</li>
   <li><strong>Bluetooth</strong>: um zu erkennen, wann sich das Handy mit deinem Motorrad oder Headset verbindet, und dann die Aufnahme zu starten.</li>
   <li><strong>Mikrofon</strong>: nur für die Sprachsteuerung „Hoi HuMu!“ während der Navigation, und nur nachdem du die Headset-Taste oder den Knopf „Hoi HuMu“ gedrückt hast. Die Sprache wird von der Spracherkennung deines Android-Geräts in Text umgewandelt; wenn möglich geschieht das direkt auf dem Gerät, sonst über den Spracherkennungsdienst des Geräts (meist Google). Aufnahmen werden von der App weder gespeichert noch an den Entwickler übertragen.</li>
+  <li><strong>Kamera</strong>: nur zum Scannen des QR-Codes beim Beitritt zu einem Wolfsrudel. Das Kamerabild wird nur auf dem Gerät ausgewertet, nicht gespeichert und nicht übertragen.</li>
   <li><strong>Fotos</strong>, die du selbst auswählst (Motorrad, Profil, Bilder in der Animationsfahrt).</li>
   <li><strong>Angaben, die du selbst einträgst</strong>, zum Beispiel Name, Motorräder, Hof (Zuhause), Einstellungen.</li>
 </ul>
 
 <h2>4. Dienste, an die beim Benutzen Daten gehen</h2>
-<p>Für einzelne Funktionen fragt die App Online-Dienste an. Dabei werden die jeweils nötigen Angaben und – technisch bedingt – deine IP-Adresse übertragen. Es werden <strong>keine Namen, Konten oder Gerätekennungen</strong> mitgeschickt.</p>
+<p>Für einzelne Funktionen fragt die App Online-Dienste an. Dabei werden die jeweils nötigen Angaben und – technisch bedingt – deine IP-Adresse übertragen. Es werden <strong>keine Namen, Konten oder Gerätekennungen</strong> mitgeschickt (Ausnahme: Wolfsrudel, siehe Punkt 5).</p>
 <ul>
   <li><strong>Routenberechnung (Valhalla)</strong>: Start, Ziel und Wegpunkte. Entweder an einen eigenen, vom Nutzer eingetragenen Server oder an den öffentlichen Server <em>valhalla1.openstreetmap.de</em> (betrieben von der FOSSGIS e. V.).</li>
   <li><strong>Ortssuche (Nominatim)</strong>: der eingegebene Suchbegriff, an <em>nominatim.openstreetmap.org</em> (OpenStreetMap Foundation).</li>
@@ -53,23 +54,36 @@
 </ul>
 <p>Für diese Dienste gelten die Datenschutzhinweise der jeweiligen Betreiber. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der von dir genutzten Funktion).</p>
 
-<h2>5. Sicherungen</h2>
+<h2>5. Wolfsrudel (Gruppenfahrt)</h2>
+<p>Das Wolfsrudel ist freiwillig. Es wird nur aktiv, wenn du selbst ein Rudel gründest oder einer Einladung folgst.</p>
+<ul>
+  <li><strong>Wer die Daten erhält</strong>: Die Gruppe wird über einen „Rudel-Dienst“ abgeglichen. Dieser läuft auf einem eigenen Server des Leitwolfs (Tourguide), der das Rudel gegründet hat; die Adresse steckt in der Einladung. Es gibt keinen zentralen Dienst des Entwicklers für alle Nutzer. Die Verbindung ist verschlüsselt (https). Ist der Dienst über <em>Tailscale Funnel</em> erreichbar, wird die verschlüsselte Verbindung über Server der Tailscale Inc. weitergeleitet, ohne dass diese den Inhalt lesen können.</li>
+  <li><strong>Welche Daten</strong>: der Name, den du in HuMuRide eingetragen hast, der Name deines Motorrads, deine Rolle im Rudel, und – erst ab dem „Sammelruf“ des Leitwolfs – dein Standort mit Tempo und Fahrtrichtung, etwa alle 5 Sekunden. Dazu Kurznachrichten (z. B. „Pause“, „Tanken“, „Rudel verloren“), der Treffpunkt und die Wegpunkte der Route des Leitwolfs. Diese Angaben sehen alle Mitglieder desselben Rudels.</li>
+  <li><strong>Wie lange</strong>: Der Rudel-Dienst hält die Daten nur im Arbeitsspeicher, nicht auf der Festplatte. Sie werden gelöscht, wenn der Leitwolf das Rudel auflöst, wenn 24 Stunden lang niemand mehr verbunden war, spätestens nach 3 Tagen, oder wenn der Dienst neu startet. Wer das Rudel verlässt, wird aus der Liste entfernt.</li>
+  <li><strong>Einladungslink</strong>: Der Link zeigt eine kleine Seite auf <em>hegowerk.github.io</em> (GitHub Pages, GitHub Inc.). Die Rudel-Angaben stehen im Link hinter dem Zeichen „#“ und werden deshalb nicht an GitHub übertragen; GitHub erhält technisch bedingt nur die IP-Adresse und den Seitenaufruf.</li>
+  <li><strong>Rudel-Rückblick</strong>: Läuft während der Gruppenfahrt eine Aufnahme, speichert die App die Spuren der anderen Mitglieder (Name und Weg) zusammen mit deiner Tour auf deinem Gerät, damit du die gemeinsame Fahrt später in der Animationsfahrt ansehen kannst. Sie werden mit der Tour gelöscht.</li>
+  <li><strong>Leitwolf-Wechsel</strong>: Ist der Leitwolf während der Fahrt drei Minuten lang nicht erreichbar, übernimmt automatisch ein anderes Mitglied die Führung; der Leitwolf kann sie auch selbst übergeben.</li>
+  <li><strong>Beenden</strong>: Mit „Rudel verlassen“ (Leitwolf: „Rudel auflösen“) endet das Teilen sofort.</li>
+</ul>
+<p>Rechtsgrundlage ist deine Einwilligung durch Gründen oder Beitreten (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit durch Verlassen des Rudels widerrufen kannst. Verantwortlich für den Rudel-Dienst ist der Leitwolf, der ihn betreibt.</p>
+
+<h2>6. Sicherungen</h2>
 <ul>
   <li><strong>Automatische Sicherung auf dem Handy</strong>: eine Datei im Ordner <em>Download/HuMuRide</em> auf deinem Gerät. Abschaltbar in den Einstellungen.</li>
   <li><strong>Sicherung auf einen eigenen Server</strong>: nur wenn du selbst eine Server-Adresse einträgst. Die Daten gehen dann ausschließlich an diesen Server.</li>
   <li><strong>Datei-Sicherung</strong>: nur wenn du sie selbst auslöst und teilst.</li>
 </ul>
 
-<h2>6. Fehlerprotokoll</h2>
+<h2>7. Fehlerprotokoll</h2>
 <p>Über „Fehlerprotokoll senden“ kannst du freiwillig ein Protokoll erstellen. Es enthält Gerätemodell, Android- und App-Version, erteilte Berechtigungen, App-Einstellungen (ohne Passwörter, Server-Adresse und Hof) und technische Meldungen der App. Es enthält keine Strecken. Das Protokoll wird nur gesendet, wenn du es selbst per E-Mail an <a href="mailto:hegowerk.hilfe@web.de">hegowerk.hilfe@web.de</a> schickst oder selbst teilst. Es wird nur zur Fehlerbehebung genutzt und danach gelöscht.</p>
 
-<h2>7. Android Auto</h2>
+<h2>8. Android Auto</h2>
 <p>Bei Nutzung mit Android Auto zeigt die App Abbiegehinweise auf dem Fahrzeugdisplay. Dabei werden keine zusätzlichen Daten an den Entwickler übertragen.</p>
 
-<h2>8. Löschen</h2>
+<h2>9. Löschen</h2>
 <p>Alle Daten liegen auf deinem Gerät. Du kannst einzelne Touren in der App löschen oder alles entfernen, indem du die App deinstallierst. Die automatische Sicherungsdatei im Download-Ordner bleibt dabei bewusst erhalten und kann mit einem Dateimanager gelöscht werden.</p>
 
-<h2>9. Deine Rechte</h2>
+<h2>10. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (in Baden-Württemberg: Landesbeauftragter für den Datenschutz und die Informationsfreiheit). Da der Entwickler keine Daten von dir speichert, genügt für Fragen eine E-Mail an <a href="mailto:hegowerk.hilfe@web.de">hegowerk.hilfe@web.de</a>.</p>
 
 <hr>
