@@ -20,7 +20,7 @@
 <body>
 <main>
 <h1>Datenschutzerklärung für HuMuRide</h1>
-<p class="muted">App „HuMuRide“ – aus dem Hegowerk · Stand: 15. November 2026</p>
+<p class="muted">App „HuMuRide“ – aus dem Hegowerk · Stand: 17. November 2026</p>
 
 <h2>1. Verantwortlich</h2>
 <p>
@@ -50,7 +50,7 @@
   <li><strong>Ortssuche (Nominatim)</strong>: der eingegebene Suchbegriff, an <em>nominatim.openstreetmap.org</em> (OpenStreetMap Foundation).</li>
   <li><strong>Pausen- und Tankstellensuche (Overpass)</strong>: ein Kartenausschnitt entlang der Route oder um deinen Standort, an öffentliche Overpass-Server (<em>overpass.openstreetmap.fr</em>, bei Störung ersatzweise <em>overpass-api.de</em> oder <em>maps.mail.ru</em>).</li>
   <li><strong>Wetter (Open-Meteo)</strong>: ungefähre Koordinaten, an <em>api.open-meteo.com</em>.</li>
-  <li><strong>Kartenbilder (OpenStreetMap)</strong>: der angezeigte Kartenausschnitt, an <em>tile.openstreetmap.org</em> (OpenStreetMap Foundation).</li>
+  <li><strong>Kartenbilder (OpenStreetMap)</strong>: der angezeigte Kartenausschnitt, an <em>tile.openstreetmap.org</em> (OpenStreetMap Foundation). Ist eine <strong>Offline-Karte</strong> eingerichtet, kommen die Kartenbilder in ihrem Gebiet aus der Kartendatei auf deinem Gerät und es wird dafür nichts übertragen; ohne Internet sucht die App Orte ebenfalls nur in dieser Datei.</li>
 </ul>
 <p>Für diese Dienste gelten die Datenschutzhinweise der jeweiligen Betreiber. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der von dir genutzten Funktion).</p>
 
@@ -73,6 +73,7 @@
   <li><strong>Automatische Sicherung auf dem Handy</strong>: eine Datei im Ordner <em>Download/HuMuRide</em> auf deinem Gerät. Abschaltbar in den Einstellungen.</li>
   <li><strong>Sicherung auf einen eigenen Server</strong>: nur wenn du selbst eine Server-Adresse einträgst. Die Daten gehen dann ausschließlich an diesen Server.</li>
   <li><strong>Datei-Sicherung</strong>: nur wenn du sie selbst auslöst und teilst.</li>
+  <li><strong>Verschlüsselung</strong>: Auf Wunsch verschlüsselt die App alle Sicherungen mit einem Kennwort, das nur du kennst (AES-256-GCM, Schlüssel per PBKDF2 aus dem Kennwort). Das Kennwort bleibt auf deinem Gerät und steht nie in der Sicherung. Ohne Kennwort kann niemand die Sicherung lesen, auch der Entwickler nicht.</li>
 </ul>
 
 <h2>7. Fehlerprotokoll</h2>
